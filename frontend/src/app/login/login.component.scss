@@ -1,0 +1,27 @@
+h2{
+  font-family: Montserrat;
+  color: rgb(30, 115, 190);
+}
+.card{
+  font-family: Montserrat;
+  background-color: rgb(222, 236, 249);
+}
+label{
+  font-weight: 600 !important;
+  font-size: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  box-shadow: 0 0 0 30px white inset !important;
+  font-family: Montserrat !important;
+
+}
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}

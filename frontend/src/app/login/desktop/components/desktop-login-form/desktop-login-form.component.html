@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-sm-8 col-xl-4">
+      <div class="card" style="background-color: white;">
+        <div class="card-header text-center"> Iniciar sesión </div>
+        <div class="card-body justify-content-center align-items-center mt-2 ml-auto mr-auto" style="width: 90%;">
+          <form id="login-form" [formGroup]="sesionForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <label for="exampleInputEmail" style="font-size: 18px;"> Correo electrónico: </label>
+              <input type="email" class="form-control inp" formControlName="email" placeholder="ejemplo@gmail.com" [ngClass]="{ 'is-invalid': sesionFormControls.email.errors && emailContains()}">
+              <div class="invalid-feedback" *ngIf="sesionFormControls.email.touched && email.length === 0"> Por favor, ingrese un correo
+              </div>
+              <div class="invalid-feedback" *ngIf="sesionFormControls.email.errors && email.length > 0">
+                Por favor ingrese un correo válido
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword" style="font-size: 18px;"> Contraseña: </label>
+              <input type="password" class="form-control inp" formControlName="password" placeholder="*******" [ngClass]="{ 'is-invalid': sesionFormControls.password.errors && sesionFormControls.password.touched }">
+              <!-- agregar ruta account recovery-->
+              <div class="invalid-feedback" *ngIf="sesionFormControls.password.touched && password.length === 0"> Por favor, ingrese una contraseña
+              </div>
+              <div class="invalid-feedback" *ngIf="sesionFormControls.password.errors && password.length < 6"> La contraseña debe tener mínimo 6 caracteres
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col text-center mt-4">
+                <button type="button" form="login-form" class="btn btn-login px-4" (click)="toggleLoading()" [disabled]="!sesionForm.valid"> Iniciar sesión
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
