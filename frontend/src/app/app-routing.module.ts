@@ -5,9 +5,8 @@ const routes: Routes = [
 
   {
     path: '',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+    loadChildren: () => import('./visitor/visitor.module').then(m => m.VisitorModule)
   },
-  //agregar visitor screen
 
   {
     path: 'login',
@@ -21,7 +20,7 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'user/'
+    redirectTo: 'visitor/'
   }
 ];
 
