@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: VisitorLandingComponent,
     children: [
-      { path: '', component: LandingScreenComponent }
+      { path: 'landing', component: LandingScreenComponent }
     ]
   }
 ];

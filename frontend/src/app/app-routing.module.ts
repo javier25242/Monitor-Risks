@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-  {
+  /*{
     path: '',
     loadChildren: () => import('./visitor/visitor.module').then(m => m.VisitorModule)
   },
@@ -11,6 +11,16 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },*/
+
+  {
+    path: '',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },
+  // EDITAR EN 2DA ENTREGA
+  {
+    path:'visitor',
+    loadChildren: () => import('./visitor/visitor.module').then(m => m.VisitorModule)
   },
 
   {
@@ -20,8 +30,9 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'visitor/'
+    redirectTo: 'login/'
   }
+
 ];
 
 @NgModule({

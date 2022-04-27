@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       { path: '', loadChildren: () => import('./modules/visitor-landing/visitor-landing.module').then(m => m.VisitorLandingModule) },
       //{ path: 'help', loadChildren: () => import('./modules/visitor-help/visitor-help.module').then(m => m.VisitorHelpModule) },
-      { path: '**', redirectTo: 'visitor/'},
+      //{ path: '**', redirectTo: 'visitor/'},
     ]
   },
-
-  { path: '**', redirectTo: 'visitor/' },
+  //{ path: '**', redirectTo: 'visitor/'}
+  { path: 'visitor/', redirectTo: 'visitor/landing' },
 ];
 
 @NgModule({

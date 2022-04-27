@@ -4,7 +4,7 @@ import { UserDataComponent } from './user-data.component';
 
 const routes: Routes = [
   {
-    path: 'user/data',
+    path: '',
     component: UserDataComponent,
     children: [
       { path: 'data', component: UserDataComponent},

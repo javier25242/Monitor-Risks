@@ -25,8 +25,9 @@
             </div>
             <div class="row justify-content-center">
               <div class="col text-center mt-4">
-                <button type="button" form="login-form" class="btn btn-login px-4" (click)="toggleLoading()" [disabled]="!sesionForm.valid"> Iniciar sesión
-                </button>
+                <!--<button type="button" form="login-form" class="btn btn-login px-4" (click)="toggleLoading()" [disabled]="!sesionForm.valid"> Iniciar sesión
+                </button>-->
+                <a class="px-4" style="background-color:rgb(30, 115, 190); color: white; border-radius: 9px; font-family: Poppins; font-size: 18px;" [routerLink]="['/visitor/landing']">Inisiar sesión</a>
               </div>
             </div>
           </form>
