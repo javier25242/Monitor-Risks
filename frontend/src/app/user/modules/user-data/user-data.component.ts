@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDataComponent implements OnInit {
 
+  img = "https://ppm.express/wp-content/uploads/2022/03/5-1-2-1024x629.webp"
   constructor() { }
 
   ngOnInit(): void {
